@@ -1,0 +1,65 @@
+#paragraphe
+{
+color:black;
+background-color:rgb(4, 0, 255);
+border:3px solid black;
+min-height:10em;
+height:10em;
+border-left: dashed black 30px;
+visibility: hidden;
+transition-property: color;
+transition-duration: 1s;
+}
+
+body{
+    background-color: red;
+}
+
+#menulogo{
+    font-size: 50px;
+    border-left:150px solid green;
+    border-right: 150px solid green;
+    background-color: green;
+    border-radius: 100px;
+    color: white;
+    box-shadow: 30px 20px 7px rgb(3, 99, 3);
+    margin-left: 10px;
+
+}
+h1{
+    text-align: center;
+}
+
+img{
+    object-position: top left;
+}
+
+h2:hover{
+    color:aqua;
+}
+
+.ensemble{
+    display: inline-block;
+}
+
+.ensemble:hover #paragraphe{
+    visibility: visible;
+}
+
+li:hover, a:hover{
+    color:chocolate;
+}
+li,a,h2{
+    transition-property: color;
+    transition-duration: 1s;
+}
+
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}

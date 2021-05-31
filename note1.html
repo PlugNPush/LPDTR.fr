@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript"></script>
+        <style type="text/css">
+
+            
+            body{
+                border: 1000px;
+                width: 2000px;
+            }
+            table{
+                background-color: white;
+                border-collapse: collapse;
+                border: 5px solid red;
+                margin: 50 px 500px;
+            }
+            .colonne{
+                background-color: grey;
+            }
+
+            th{
+                border: 2px solid black;
+                padding: 15px;
+                text-align: center;
+            }
+            td{
+                border: 2px solid black;
+                padding: 15px;
+            }
+            .recette{
+                text-align: left;
+            }
+            .prix{
+                text-align: right;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <table>
+            <colgroup>
+                <col span="1" class="colonne">            
+            </colgroup>
+            <tr>
+                <td>&nbsp;</td>
+                <th>Recette</th>
+                <th>Prix</th>
+            </tr>
+            <tr>
+                <th rowspan="2">Entrée</th>
+                <td class="recette">Soupe de légumes</td>
+                <td class="prix">8 euros</td>
+            </tr>
+            <tr>
+                <td class="recette">Salade aux fruits de mer</td>
+                <td class="prix">19 euros</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Plat</th>
+                <td class="recette">Couscous au poissons</td>
+                <td class="prix">14 euros</td>
+            </tr>
+            <tr>
+                <td class="recette">Côte de veau aux petits légumes</td>
+                <td class="prix">12 euros</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Dessert</th>
+                <td class="recette">Tiramisu</td>
+                <td class="prix">6 euros</td>
+            </tr>
+            <tr>
+                <td class="recette">Mousse au chocolat</td>
+                <td class="prix">5 euros</td>
+            </tr>
+        </table>
+    </body>
+</html>
