@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title>Exo5</title>
+        <meta name="viewport" content="width=device-width">
+		<link type="text/css" rel = "stylesheet" href="Style5.css">
+	</head>
+
+	<body>
+		<header>
+			<form>
+
+				<div class="item">
+				<img class="logo" src="s-l300.png" alt="logo de l'école" width=100>
+				</div>
+
+                <nav>
+                    <button type="button" onclick="showUsers()"> Utilisateur</button>
+                    <button type="button" onclick="showTasks()"> Tâche</button>
+                </nav>
+
+				<div id="formulaire2">
+                        <div class="case">
+                            <input type="text" id="nom" name="Nom" placeholder="Nom" required>
+
+                            <input type="text" id="prénom" name="Prénom" placeholder="Prénom" required>
+
+                            <input type="email" id="email" name="email" placeholder="Adresse email valide" required>
+
+                            <select id="rôle">
+                                <optgroup label="Rôle">
+                                    <option value="etudiant">Etudiant</option>
+                                    <option value="enseignant">Enseignant</option>
+                                </optgroup>
+                            </select>
+                            <br>
+                        </div>
+
+					<div class="button">
+                        <button class="time" type="button" id="compteur" onclick="ajouter()">Ajouter (10)</button>
+
+                        <button type="reset" onclick="destroyed()">Tout Supprimer</button>
+		    		</div>
+	    		</div>
+			</form>
+		</header>
+
+        <main id="formulaire">
+            <h1 id="utilisateur_Titre">Utilisateur</h1>
+            <table id="utilisateur">
+                    <tr>
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>Email</th>
+                        <th>Rôle</th>
+                    </tr>
+            </table>
+
+            <h1 id="tache_Titre">Tâche</h1>
+            <table id="tache">
+                    <tr>
+                        <th>USER ID</th>
+                        <th>ID</th>
+                        <th>Titre</th>
+                        <th>Terminé</th>
+                    </tr>
+            </table>
+            <button id="precedent" onclick="action_precedent()">Précedent</button>
+            <button id="suivant" onclick="action_suivant()">Suivant</button>
+        </main>
+        <script src="exo5.js"></script>
+	</body>
+</html>
