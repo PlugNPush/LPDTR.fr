@@ -4,35 +4,49 @@
     box-sizing: border-box;
 }
 
+/*------------------Navigation---------------------*/
+
 nav {
     width: 100%;
     height: 75px;
     background-color: #505d61;
-    line-height: 75px;
-    padding: 0 100px;
+    align-items: center;
+    /*padding: 0 100px;*/
     position: fixed;
     z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: 3px solid yellow;
 }
 
-nav .logo{
+nav .name_site{
     font-size: 30px;
     font-weight: bold;
     letter-spacing: 1.5px;
-}
-
-nav .logo p { /*le titre tout à gauche*/
-    float: left;
+    /*text-align: left;*/
     color: #fff;
     text-transform: uppercase;
-} 
+    border: 3px solid green;
+}
+
+ul {
+    width:100%;
+    justify-content: space-around;
+    border: 3px solid red;
+}
+
+ul, li { /*À propos d'IMMUNOEFREI et Réseaux sociaux*/
+    list-style-type: none;
+}
 
 nav ul {
     float: right;
+    display: flex;
 }
 
 nav ul li {
-    display: inline-block;
-    list-style-type: none;
+    display: flex;
 }
 
 nav ul li a {
@@ -40,7 +54,7 @@ nav ul li a {
     text-decoration: none;
     font-size: 18px;
     text-transform: uppercase;
-    padding: 0px 32px;  
+    /*padding: 0px 4px;*/
 }
 
 nav ul li a:hover { /*couleur change lorsque l'on survole le texte*/
@@ -56,6 +70,8 @@ nav ul li .active { /*couleur reste sur l'onglet actif*/
     height: 0px auto;
     opacity: 0.80;
 }
+
+/*---------------------Home------------------------*/
 
 /*--------------------Footer-----------------------*/
 .footer {
@@ -91,6 +107,7 @@ nav ul li .active { /*couleur reste sur l'onglet actif*/
 
 .colonne_1 {
     flex-basis: 26%; /*espace pris par la colonne 1*/
+    text-align: center;
 }
 
 .colonne_2 {
@@ -106,12 +123,7 @@ nav ul li .active { /*couleur reste sur l'onglet actif*/
 .colonne_3, .colonne_4 {
      flex-basis: 12%;
      text-align: center;
-     list-style-type: none;  
-}
-
-
-ul { /*À propos d'IMMUNOEFREI et Réseaux sociaux*/
-    list-style-type: none;
+     list-style-type: none;
 }
 
 .footer hr {
@@ -125,3 +137,95 @@ ul { /*À propos d'IMMUNOEFREI et Réseaux sociaux*/
 .Copyright {
     text-align: center;
 }
+
+.chuispala { /*dans un js ==> element.classList.add("disabled");*/
+	display:none;
+}
+
+.chuisla {
+	display:flex;
+}
+
+@media (max-width: 755px){
+	.formcontent{
+		flex-direction: column;
+	}
+}
+
+
+
+/* DROPDOWN */
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+    font-family: 'Oswald', sans-serif;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+}
+
+.topnav.responsive {
+    display: block;
+}
+
+.name_site {
+    width: 100%;
+    text-align: left;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: flex;
+    color: #f2f2f2;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:not(.name_site) {
+    text-align: center;
+    /*width: 40%;*/
+}
+  
+/* Add an active class to highlight the current page */
+.active {
+    background-color: #04AA6D;
+    color: white;
+}
+  
+/* Hide the link that should open and close the topnav on small screens */
+  .topnav .icon {
+    display: none;
+  }
+  
+  /* Add a dark background on topnav links and the dropdown button on hover */
+  .topnav a:hover {
+    background-color: #555;
+    color: white;
+  }
+  
+  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  @media screen and (max-width: 600px) {
+    .topnav a:not(:first-child), .dropdown .dropbtn {
+      display: none;
+    }
+    .topnav a.icon {
+      float: right;
+      display: flex;
+    }
+
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: flex;
+      text-align: left;
+    }
+  }
