@@ -2,7 +2,9 @@
     margin : 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
 }
+
 
 /*------------------Navigation---------------------*/
 
@@ -25,7 +27,7 @@ nav .name_site{
     font-weight: bold;
     letter-spacing: 1.5px;
     /*text-align: left;*/
-    color: #fff;
+    color: green;
     text-transform: uppercase;
     border: 3px solid green;
 }
@@ -33,7 +35,6 @@ nav .name_site{
 ul {
     width:100%;
     justify-content: space-around;
-    border: 3px solid red;
 }
 
 ul, li { /*À propos d'IMMUNOEFREI et Réseaux sociaux*/
@@ -73,7 +74,61 @@ nav ul li .active { /*couleur reste sur l'onglet actif*/
 
 /*---------------------Home------------------------*/
 
+#home{
+    flex-direction: column;
+}
+
+/*-------------------Produit----------------------*/
+
+.page_produit{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 3px solid yellow;
+    width:100%;
+    justify-content: center;
+}
+
+.produit{
+    border: 3px solid darkblue;
+    background-color: gray;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 700px;
+}
+
+.produit img {
+    border: 3px solid purple;
+    width: 50%;
+    max-height: none;
+    height: 0px auto;
+    opacity: 0.80;
+}
+
+.info_produit{
+    /*justify-content:left;*/
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: lightcoral;
+}
+
+/*-------------------Devis-----------------------*/
+
+.devis{
+    display:flex;
+    flex-direction: column;
+}
+
+/*--------------------Avis-----------------------*/
+
+/*------------------A propos---------------------*/
+
 /*--------------------Footer-----------------------*/
+
 .footer {
     font-family: 'Oswald', sans-serif;
     background-color: #000;
@@ -81,7 +136,6 @@ nav ul li .active { /*couleur reste sur l'onglet actif*/
     font-size: 14px;
     padding: 60px 0 20px;
 }
-
 
 .row {
     display: flex; /*les éléments du footer sont à l'horizontal*/ 
@@ -102,28 +156,31 @@ nav ul li .active { /*couleur reste sur l'onglet actif*/
 .colonne_1, .colonne_2, .colonne_3, .colonne_4 {
     margin-bottom: 20px;
     min-width: 250px;
-    
 }
 
-.colonne_1 {
-    flex-basis: 26%; /*espace pris par la colonne 1*/
-    text-align: center;
+.colonne_1 { /*Développeurs du site*/
+    margin-left: 25px;
+    flex-basis: 26%;
 }
 
-.colonne_2 {
+.colonne_2 { /*texte pour la société CHERAU*/
     flex : 1;
     text-align: center;
 }
 
-.colonne_2 img {
+.colonne_2 img { /*logo EFREI*/
     width: 180px;
-    margin-bottom: 20px;
+    margin-bottom: 10px; /*espace entre l'image et le texte*/
+    justify-content: center;
 }
 
-.colonne_3, .colonne_4 {
-     flex-basis: 12%;
+.colonne_3, .colonne_4 { /*Nos Informations, Nos réseaux sociaux*/
      text-align: center;
-     list-style-type: none;
+     list-style-type: none;  
+}
+
+ul { 
+    list-style-type: none; /*retirer les puces des listes*/
 }
 
 .footer hr {
@@ -137,6 +194,17 @@ nav ul li .active { /*couleur reste sur l'onglet actif*/
 .Copyright {
     text-align: center;
 }
+/*max = si l'écran est inférieur ou égal à alors {...}*/
+@media (max-width : 1000px) {
+    .row {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+    }
+
+}
+
+/*--------------------Autre-----------------------*/
 
 .chuispala { /*dans un js ==> element.classList.add("disabled");*/
 	display:none;
@@ -146,6 +214,8 @@ nav ul li .active { /*couleur reste sur l'onglet actif*/
 	display:flex;
 }
 
+/*--------------------Mobile-----------------------*/
+
 @media (max-width: 755px){
 	.formcontent{
 		flex-direction: column;
@@ -153,13 +223,11 @@ nav ul li .active { /*couleur reste sur l'onglet actif*/
 }
 
 
-
 /* DROPDOWN */
 /* Add a black background color to the top navigation */
 .topnav {
     background-color: #333;
     overflow: hidden;
-    font-family: 'Oswald', sans-serif;
     align-items: center;
     flex-wrap: nowrap;
     display: flex;
@@ -170,6 +238,7 @@ nav ul li .active { /*couleur reste sur l'onglet actif*/
 }
 
 .name_site {
+    color: green;
     width: 100%;
     text-align: left;
 }
@@ -178,7 +247,7 @@ nav ul li .active { /*couleur reste sur l'onglet actif*/
 .topnav a {
     float: left;
     display: flex;
-    color: #f2f2f2;
+    
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
@@ -186,6 +255,7 @@ nav ul li .active { /*couleur reste sur l'onglet actif*/
 
 .topnav a:not(.name_site) {
     text-align: center;
+    color: #f2f2f2;
     /*width: 40%;*/
 }
   
@@ -229,3 +299,161 @@ nav ul li .active { /*couleur reste sur l'onglet actif*/
       text-align: left;
     }
   }
+
+  @media screen and (min-width: 600px) {
+    
+  }
+
+
+
+
+/* Ici c'est de la d */
+
+
+
+  *{
+	box-sizing: border-box;
+	font-family: Verdana;
+}
+
+.logo{
+	border-radius: 100%;
+	border: 3px solid black;
+	margin-top: 15px;
+    margin-bottom: 15px;
+	box-shadow: 0px 0px 15px black;
+}
+
+.headerlogo{
+	text-align: center;
+}
+
+.main{
+	box-shadow: 0px 0px 10px grey;
+	padding: 10px;
+	background-color: white;
+	max-width: 1000px;
+	margin: 2px auto;
+	overflow-x: scroll;
+    width: 100%;
+}
+
+body{
+	background-color: lightgrey;
+}
+
+.buttons button{
+	margin: 5px;
+	text-transform: uppercase;
+	border: none;
+	box-shadow: 0px 0px 5px grey;
+	background-color: lightgray;
+	padding: 3px;
+}
+
+.buttons button:hover{
+	background-color: grey;
+}
+
+.buttons{
+	margin: 1%;
+}
+
+.formcontent{
+	display: flex;
+}
+
+input, select{
+	flex: auto;
+	border: none;
+	border-bottom: 2px solid grey;
+	margin: 1%;
+	padding: 1%;
+}
+
+@media (max-width: 755px){
+	.formcontent{
+		flex-direction: column;
+	}
+}
+
+input:invalid{
+	border-color: red;
+	caret-color: red;
+}
+
+/*TP3*/
+table {
+	border-collapse: collapse;
+	width: 100%;
+	margin: 5px auto;
+	text-align: center;
+	overflow-x: scroll;
+}
+
+th {
+	padding: 5px;
+	/*border-bottom: 1px solid black;*/
+}
+
+td {
+	padding: 3px;
+}
+
+tr {
+	border-bottom: 1px solid black;
+}
+
+table tr:last-of-type{
+	border-bottom: hidden;
+}
+
+tbody tr:last-of-type{
+	border-bottom: 2px solid black;
+}
+
+.aimante {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+}
+
+.disabled {
+	background-color: black;
+	color: red;
+}
+
+/**/
+
+nav {
+	text-align: center;
+	margin-bottom: 7px;
+}
+
+nav button{
+	background-color: white;
+	padding: 3px;
+	text-transform: uppercase;
+	border: none;
+	box-shadow: 0px 0px 3px grey;
+}
+
+nav button:hover{
+	background-color: lightgrey;
+}
+
+#title_task, #title_user {
+	text-align: center;
+	font-weight: bold;
+	text-decoration-line: underline;
+}
+
+.chuispala {
+	display:none;
+}
+
+#pagination {
+	text-align: center;
+}
