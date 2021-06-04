@@ -568,7 +568,7 @@ nav button:hover{
     align-items: start;
     text-align: center;
     color: whitesmoke;
-    background-image: url("/images/agricole-blur.jpeg");
+    background-image: url("../images/agricole-blur.jpeg");
     background-size: cover;
     padding: 10% 0 10%;
   }
