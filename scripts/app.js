@@ -119,8 +119,8 @@ function recherche(){
   }
   var ma_recherche = document.getElementById('recherche').value;
   console.log(ma_recherche);
+  var ma_page = document.getElementById("page_produit");
   if (ma_recherche!=""){
-    var ma_page = document.getElementById("page_produit");
     ma_page.innerHTML = "";
     //console.log(ma_page);
     for(var key in les_produits) { /* stringB.indexOf( stringA ) > -1 */
@@ -139,10 +139,10 @@ function recherche(){
   } else {
     suicide_recherche();
   }
-  
   if (ma_page.innerHTML == ""){
     ma_page.innerHTML = "<div>Nous n'avons trouvé aucun résultat</div>";
   }
+
   les_produits.sort(function(first, second) {
     return first.id - second.id;
   });
