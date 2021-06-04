@@ -10,10 +10,10 @@
     </head>
     <body onresize="test_responsive()">
             <div class="topnav" id="myTopnav">
-                <a href="#" id="name_site" class="name_site" onclick="create_home()">Efrei Farming</a>
+                <a href="#" id="name_site" class="name_site" onclick="create_home()">Efrei&nbsp;Farming</a>
                 <a href="#" class="active" id="nav_home" onclick="create_home()">Accueil</a>
                 <a href="#" id="nav_prod" onclick="create_prod()">Produits</a>
-                <a href="#" id="nav_devis" onclick="create_devis()">Devis</a>
+                <a href="#" id="nav_devis" onclick="create_devis()">Devis<span id="devisQteMenu"></span></a>
                 <a href="#" id="nav_avis" onclick="create_avis()">Avis</a>
                 <a href="#" id="nav_propos" onclick="create_propos()">À&nbsp;propos</a> <!-- &nbsp; = NON-BREAKING SPACE -->
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
@@ -21,75 +21,38 @@
 
         <div id="home" class="home chuisla">
             <div class="image">
-                <img src="images/agricole.jpeg">
+                <img src="/images/agricole.jpeg" alt="Efrei FARMING">
+            </div>
+            <div class="wrapper">
+                <div class="cheapcontent">
+                    <h1>Notre entrée de gamme</h1>
+                    <div class="cheapest" id="cheapest">
+                    </div>
+                </div>
+                
+                <div class="popularcontent">
+                    <h1>Le plus populaire</h1>
+                    <div class="popularest" id="popularest">
+                    </div>
+                </div>
+                
+                <div class="newcontent">
+                    <h1>Le dernier cri</h1>
+                    <div class="newest" id="newest">
+                    </div>
+                </div>
+                
+                <div class="highendcontent">
+                    <h1>La Rolls-Royce des tracteurs</h1>
+                    <div class="highestend" id="highestend">
+                    </div> 
+                </div>
+                
             </div>
         </div>
 
         <div id="prod" class="prod chuispala">
-            <!--<table>
-                <colgroup>
-                    <col span="1" class="colonne">            
-                </colgroup>
-                <tr>
-                    <td>&nbsp;</td>
-                    <th>Types</th>
-                    <th>Prix</th>
-                </tr>
-                <tr>
-                    <th rowspan="2">Tracteur conventionnel</th>
-                    <td class="recette">Fendt 1000 Vario</td>
-                    <td class="prix">641 000 euros</td>
-                </tr>
-                <tr>
-                    <td class="recette">TT504 50hp</td>
-                    <td class="prix"> 4 5000 euros</td>
-                </tr>
-                <tr>
-                    <th rowspan="2">Micro tracteur </th>
-                    <td class="recette">Kubota B1500DT</td>
-                    <td class="prix">3 791 euros</td>
-                </tr>
-                <tr>
-                    <td class="recette">MTD 96</td>
-                    <td class="prix">1 344,65 euros</td>
-                </tr>
-                <tr>
-                    <th rowspan="2">Tracteur enjambeur</th>
-                    <td class="recette">Grégoire G5-320</td>
-                    <td class="prix">172 000 euros</td>
-                </tr>
-                <tr>
-                    <td class="recette">Bobard Polybob</td>
-                    <td class="prix">1 000 euros</td>
-                </tr>
-                <tr>
-                    <th rowspan="2">Tracteur forestier</th>
-                    <td class="recette">Eliatis Chaptrack 282</td>
-                    <td class="prix">330 000 euros</td>
-                </tr>
-                <tr>
-                    <td class="recette">Agrip JD 4000</td>
-                    <td class="prix">1 000 euros</td>
-                </tr>
-                <tr>
-                    <th rowspan="2">Tracteur de pente</th>
-                    <td class="recette">Reform metrac</td>
-                    <td class="prix">78 000 euros</td>
-                </tr>
-                <tr>
-                    <td class="recette">Reform FINGERBALKENMÄHER</td>
-                    <td class="prix">841 euros</td>
-                </tr>
-                <tr>
-                    <th rowspan="2">Tracteur à chenille</th>
-                    <td class="recette">Steiger 500</td>
-                    <td class="prix">28 500 euros</td>
-                </tr>
-                <tr>
-                    <td class="recette">1961 Lamborghini 5C Ercole</td>
-                    <td class="prix">35 760 euros</td>
-                </tr>
-            </table>-->
+            <div id="recherche_produit" class="recherche_produit"> <!--la barre de recherche--></div>
             <div id="page_produit" class="page_produit"> <!--la page-->
             </div>
         </div>
@@ -119,23 +82,27 @@
                 <table id="table">
                     <p id="title_user">Bon de commande - DEVIS</p>
                     <tr>
+                        <th>ID</th>
                         <th>Nom</th>
                         <th>Catégorie</th>
                         <th>Quantité</th>
                         <th>Prix</th>
                     </tr>
                 </table>
+                <h2 style="text-align: right;">PRIX TOTAL : <span id="totalDevis">0</span> € HT</h2>
+                <h3 style="text-align: right;">QUANTITÉ D'ARTICLES : <span id="totalQte">0</span></h3>
+                <p style="text-align: right;">Pour passer une commande, veuillez <a href="https://www.societe.com/societe/societe-chereau-350434304.html">nous contacter ici</a>.</p>
             </main>
 
         </div>
 
         <div id="avis" class="avis chuispala">
-            <h1>Si t'es pas content tu reviens pas, prends tes affaires et rentre chez toi !</h1>
+            <h1>AVIS</h1>
         </div>
 
         <div id="propos" class="props chuispala">
             <h1>ON A DES TRACTEURS LOURDS SA MÈRE</h1>
-            <th>Notre site sert d'intermédaire entre une entreprise agricole et des consomateurs travaillant dans le domaine de l'agriculture
+            <h3>Notre site sert d'intermédaire entre une entreprise agricole et des consomateurs travaillant dans le domaine de l'agriculture.
 
                 En effet, l'entreprise CHEREAU à du mal à renseigner ses offres ou ses demandes aux potentiels clients.
 
@@ -143,8 +110,29 @@
                 
                 Nous mettons en lumières les différents modèles de tracteurs disponible ainsi que leur quantités.
 
-                De plus, nous permetont aux particuliers de remplir un formulaire afin de commander un produit en renseignant leur informtions êrsonnels et le type de reception (à domicile ou autre).
-            </th>
+                De plus, nous permetont aux particuliers de remplir un formulaire afin de commander un produit en renseignant leur informtions personnels et le type de reception (à domicile ou autre).
+
+                Des liens sont à disposition pour une transarence dans l'utilsation des données 
+            </h3>
+        
+            <p>Tâches remplies :</p>
+            <th>BATISTA Arnaud -> page avis, css,        </th>
+            <th>BELLIK Nassim -> page produit et à propo, js          </th>
+            <th>MARGUET Vincent -> page accueil, page produit, html/css/js,          </th>
+            <th>NASS Michael -> page devis,            </th>
+            <th>Sources :</th>
+                https://www.fendt.com/fr/geneva-assets/widget/28272/news-2-crop.jpg
+                https://sc04.alicdn.com/kf/HTB1lhRzXoLrK1Rjy1zbq6AenFXa6.jpg
+                https://lh3.googleusercontent.com/proxy/YsQ80RspJm7eVX67CoknnL6MDovJaujT_BUGdzSw1eVwO006GH9Q-0z3HS1td6mPHUz340QDHP05hHwoqhTE-EIYGnUwMqae2PSBcwkhEczpZUlL2tI0eNmRofV1CLYXdw
+                https://www.mtdfrance.fr/sites/default/files/styles/product_crop/public/upload/product/img/MTD%2096.jpg?h=259c78bd&itok=j4XUz_RY
+                https://www.vignovin.com/images/stories/partenaires/gregoire/actualites/g5-310-320/g5-320-tracteur-vigne-etroite.jpg
+                https://i.servimg.com/u/f44/15/84/06/83/tm/bizare11.jpg
+                https://www.eliatis.com/IMG/jpg/51510895_421300918622946_2077982667604754432_n.jpg
+                https://agrip.fr/wp-content/uploads/2016/04/agrip-pieces-detachees-maintenance-tracteurs-engins-agricoles-forestiers-industriels-jd5000-800x800.jpg
+                https://www.reform.at/fileadmin/_processed_/4/2/csm_metrac-H7RX-09-2015_Logo-neu_01_3adea0a883.jpg
+                https://de.tec24.com/13/16034/800/800/6046980_0.jpg
+                https://www.artcurial.com/sites/default/files/styles/840_width/public/lots-images/2019-02-01-15/3888_10649706_0.jpg?itok=DCsymmFl
+                https://img.agriexpo.online/fr/images_ag/photo-g/168666-10252661.jpg
         </div>
         
         <!--pied de page-->
@@ -167,9 +155,9 @@
                     <div class="colonne_3">
                         <h3>Nos Informations</h3>
                         <ul>
-                            <li>Conctacter CHEREAU</li>
+                            <li> <a href="https://www.societe.com/societe/societe-chereau-350434304.html"> Conctacter la société CHEREAU</a> </li>
                             <li>Nouvelles Informations</li>
-                            <li>Collectes des données Personnelles/RGPD</li>
+                            <li><a href="https://www.cnil.fr/fr/comprendre-le-rgpd"> Collectes des données Personnelles/RGPD </a></li>
                         </ul>
                     </div>
     
@@ -177,7 +165,7 @@
                         <h3>Réseaux sociaux</h3>
                         <ul>
                             <li> <a href="https://www.facebook.com/EfreiParis">Facebook</a> </li> 
-                            <li> <a href="https://twitter.com/Efrei_Paris">Twitter </a> </li>
+                            <li> <a href="https://twitter.com/Efrei_Paris">Twitter</a> </li>
                             <li> <a href="https://www.instagram.com/Efrei_Paris/">Instagram</a> </li>
                             <li> <a href="https://www.youtube.com/user/efrei">Youtube</a> </li>
                         </ul>

@@ -69,7 +69,7 @@ nav ul li .active { /*couleur reste sur l'onglet actif*/
 .image img {
     width: 100%;
     height: 0px auto;
-    opacity: 0.80;
+    opacity: 1;
 }
 
 /*---------------------Home------------------------*/
@@ -78,7 +78,28 @@ nav ul li .active { /*couleur reste sur l'onglet actif*/
     flex-direction: column;
 }
 
+/*-------------------Recherche Produit----------------------*/
+
+.recherche_produit{
+    display: flex;
+    flex-direction: row;
+    border: 3px solid red;
+    width:100%;
+    justify-content: center;
+}
+
+#tri{
+    width:135px;
+    max-width: 300px;
+}
+
 /*-------------------Produit----------------------*/
+
+.prod{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
 
 .page_produit{
     display:flex;
@@ -103,7 +124,7 @@ nav ul li .active { /*couleur reste sur l'onglet actif*/
     width: 50%;
     max-height: none;
     height: 0px auto;
-    opacity: 0.80;
+    opacity: 0.90;
 }
 
 .info_produit{
@@ -195,7 +216,7 @@ ul {
     text-align: center;
 }
 /*max = si l'écran est inférieur ou égal à alors {...}*/
-@media (max-width : 1000px) {
+@media (max-width : 1200px) {
     .row {
         flex-direction: column;
         text-align: center;
@@ -278,7 +299,7 @@ ul {
   
   /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
   /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 755px) {
     .topnav a:not(:first-child), .dropdown .dropbtn {
       display: none;
     }
@@ -298,10 +319,6 @@ ul {
       display: flex;
       text-align: left;
     }
-  }
-
-  @media screen and (min-width: 600px) {
-    
   }
 
 
@@ -457,3 +474,72 @@ nav button:hover{
 #pagination {
 	text-align: center;
 }
+
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width:100%;
+    grid-template-areas:
+      "a b"
+      "c d";
+    align-items: start;
+    text-align: center;
+    color: whitesmoke;
+    background-image: url("/images/agricole-blur.jpeg");
+    background-size: cover;
+    padding: 10% 0 10%;
+  }
+  @media (max-width: 755px){
+	.wrapper{
+		display: block;
+	}
+}
+
+
+  .cheapest {
+    grid-area: a;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: black;
+    padding: 5% 0 10%;
+  }
+  .popularest {
+    grid-area: b;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: black;
+    padding: 5% 0 10%;
+  }
+  .newest {
+    grid-area: c;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: black;
+    padding: 5% 0 10%;
+  }
+  .highestend {
+    grid-area: d;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: black;
+    padding: 5% 0 10%;
+  }
+  
+ #table * td:first-of-type, #table * th:first-of-type {
+    display: none;
+  }
