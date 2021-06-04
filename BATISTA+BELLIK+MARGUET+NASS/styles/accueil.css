@@ -1,0 +1,625 @@
+* {
+    margin : 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+/*------------------Navigation---------------------*/
+
+nav {
+    width: 100%;
+    height: 75px;
+    background-color: #505d61;
+    align-items: center;
+    /*padding: 0 100px;*/
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+nav .name_site{
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    /*text-align: left;*/
+    color: green;
+    text-transform: uppercase;
+    
+}
+
+ul {
+    width:100%;
+    justify-content: space-around;
+}
+
+ul, li { /*À propos d'IMMUNOEFREI et Réseaux sociaux*/
+    list-style-type: none;
+}
+
+nav ul {
+    float: right;
+    display: flex;
+}
+
+nav ul li {
+    display: flex;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    /*padding: 0px 4px;*/
+}
+
+nav ul li a:hover { /*couleur change lorsque l'on survole le texte*/
+    color: #c0d96f;
+}
+
+nav ul li .active { /*couleur reste sur l'onglet actif*/
+    color: #c0d96f;
+}
+
+.image img {
+    width: 100%;
+    height: 0px auto;
+    opacity: 1;
+}
+
+/*---------------------Home------------------------*/
+
+#home{
+    flex-direction: column;
+}
+
+/*-------------------Recherche Produit----------------------*/
+
+.recherche_produit{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    background-color: white;
+    justify-content: center;
+}
+
+#tri{
+    width:135px;
+    max-width: 300px;
+}
+
+/*-------------------Produit----------------------*/
+
+.prod{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.page_produit{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width:100%;
+    justify-content: center;
+}
+
+.produit{
+    background-color: gray;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 700px;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+.produit img {
+    width: 50%;
+    max-height: none;
+    height: 0px auto;
+    opacity: 0.90;
+}
+
+.all_info{
+    /*justify-content:left;*/
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-around;
+    background-color: lightcoral;
+}
+
+/*-------------------Devis-----------------------*/
+
+.devis{
+    display:flex;
+    flex-direction: column;
+}
+
+/*--------------------Avis-----------------------*/
+
+.avis {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    grid-template-areas: 
+    "commentaire aside_avis";
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#section1 {
+    border: 1px solid  rgb(142, 231, 142);
+    padding: 20px;
+    background-color: white;
+}
+
+#section2 {
+    border: 1px solid  rgb(142, 231, 142);
+    padding: 20px;
+    background-color: white;
+}
+
+#section3 {
+    border: 1px solid  rgb(142, 231, 142);
+    padding: 20px;
+    background-color: white;
+}
+
+.commentaire {
+    grid-area: main;
+    width: auto;
+    padding: 10px;
+}
+
+.avis p {
+    text-align: justify; /*texte en justifié*/
+}
+
+.aside_avis {
+    grid-area: sidebar; /* le aside se place juste après le sidebar et donc il apparait sous la section principale*/
+    background-color:  rgb(142, 231, 142);
+    padding: 10px;
+}
+
+.avis h2 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.avis ul {
+    list-style: none; /* retirer l'affichage des puces dans le menu*/
+}
+
+
+@media only screen and (max-width: 755px) { /*Pour une largeur inférieure à 755px */ 
+    .avis p {
+        font-size: 12.8px; /*les paragraphes du site ont une taille de 12.8px*/
+    }
+}
+
+@media only screen and (min-width:  755px) { /*Pour une largeur supérieure à 755px :*/
+    .avis p {
+        font-size: 14.4px; /*les paragraphes de votre site ont une taille de 14.4 px*/
+    }
+
+}
+
+@media only screen and (max-width : 755px) {
+    .avis { /* le aside passe à droite du main au delà de 1024px*/
+        flex-direction: column;
+    }
+
+}
+
+/*------------------A propos---------------------*/
+
+.propos { /* le aside passe à droite du main au delà de 1024px*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    grid-template-areas: 
+    "about sources";
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.tasktable {
+    overflow: scroll;
+    border: 2px black;
+    width: 100%;
+    height: auto;
+    background-color: white;
+}
+
+@media only screen and (max-width : 755px) {
+    .propos { /* le aside passe à droite du main au delà de 1024px*/
+        flex-direction: column;
+    }
+
+}
+
+.sources, .about{
+    padding: 10px;
+}
+
+/*--------------------Footer-----------------------*/
+
+.footer {
+    font-family: 'Oswald', sans-serif;
+    background-color: #000;
+    color: #8a8a8a;
+    font-size: 14px;
+    padding: 60px 0 20px;
+}
+
+.row {
+    display: flex; /*les éléments du footer sont à l'horizontal*/ 
+    flex-wrap: wrap; /*les éléments vont à la ligne lorsque l'on réduit la taille de la fenêtre*/
+    align-items: center; /*alignement des éléments*/
+    justify-content: space-around; 
+}
+
+.footer p{ /*paragraphe dans le pied de page*/
+    color: #8a8a8a; /*couleur*/
+}
+
+.footer h3 { /*titre dans le pied de page*/
+    color: white;
+    margin-bottom: 20px;
+}
+
+.colonne_1, .colonne_2, .colonne_3, .colonne_4 {
+    margin-bottom: 20px;
+    min-width: 250px;
+}
+
+.colonne_1 { /*Développeurs du site*/
+    margin-left: 25px;
+    flex-basis: 26%;
+}
+
+.colonne_2 { /*texte pour la société CHERAU*/
+    flex : 1;
+    text-align: center;
+}
+
+.colonne_2 img { /*logo EFREI*/
+    width: 180px;
+    margin-bottom: 10px; /*espace entre l'image et le texte*/
+    justify-content: center;
+}
+
+.colonne_3, .colonne_4 { /*Nos Informations, Nos réseaux sociaux*/
+     text-align: center;
+     list-style-type: none;  
+}
+
+ul { 
+    list-style-type: none; /*retirer les puces des listes*/
+}
+
+.footer hr {
+    border : none;
+    background: #dbd1d1;/*sépration avec la partie Copyright*/
+    margin:19px 0;
+    height: 1px; /*espace entre le Copyright et l'autre partie du footer*/
+
+}
+
+.Copyright {
+    text-align: center;
+}
+/*max = si l'écran est inférieur ou égal à alors {...}*/
+@media (max-width : 1200px) {
+    .row {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+    }
+
+}
+
+/*--------------------Autre-----------------------*/
+
+.chuispala { 
+	display:none;
+}
+
+.chuisla {
+	display:flex;
+}
+
+/*--------------------Mobile-----------------------*/
+
+@media (max-width: 755px){
+	.formcontent{
+		flex-direction: column;
+	}
+}
+
+
+/* DROPDOWN */
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+    align-items: center;
+    flex-wrap: nowrap;
+    display: flex;
+}
+
+.topnav.responsive {
+    display: block;
+}
+
+.name_site {
+    color: green;
+    width: 100%;
+    text-align: left;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: flex;
+    
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:not(.name_site) {
+    text-align: center;
+    color: #f2f2f2;
+    /*width: 40%;*/
+}
+  
+/* Add an active class to highlight the current page */
+.active {
+    background-color: #04AA6D;
+    color: white;
+}
+  
+/* Hide the link that should open and close the topnav on small screens */
+  .topnav .icon {
+    display: none;
+  }
+  
+  /* Add a dark background on topnav links and the dropdown button on hover */
+  .topnav a:hover {
+    background-color: #555;
+    color: white;
+  }
+  
+  /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  @media screen and (max-width: 755px) {
+    .topnav a:not(:first-child), .dropdown .dropbtn {
+      display: none;
+    }
+    .topnav a.icon {
+      float: right;
+      display: flex;
+    }
+
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: flex;
+      text-align: left;
+    }
+  }
+
+
+
+
+/* Ici c'est de la d */
+
+.main{
+	box-shadow: 0px 0px 10px grey;
+	padding: 10px;
+	background-color: white;
+	max-width: 1000px;
+	margin: 2px auto;
+	overflow-x: scroll;
+    width: 100%;
+}
+
+body{
+	background-color: lightgrey;
+}
+
+button{
+	margin: 1%;
+	text-transform: uppercase;
+	border: none;
+	box-shadow: 0px 0px 5px grey;
+	background-color: lightgray;
+	padding: 3px;
+}
+
+button:hover{
+	background-color: grey;
+}
+
+.danger {
+	background-color: red;
+	color: white;
+}
+
+.formcontent{
+	display: flex;
+}
+
+input, select{
+	flex: auto;
+	border: none;
+	border-bottom: 2px solid grey;
+	margin: 1%;
+	padding: 1%;
+}
+
+@media (max-width: 755px){
+	.formcontent{
+		flex-direction: column;
+	}
+}
+
+input:invalid{
+	border-color: red;
+	caret-color: red;
+}
+
+/*TP3*/
+table {
+	border-collapse: collapse;
+	width: 100%;
+	margin: 5px auto;
+	text-align: center;
+	overflow-x: scroll;
+}
+
+th {
+	padding: 5px;
+	/*border-bottom: 1px solid black;*/
+}
+
+td {
+	padding: 3px;
+}
+
+tr {
+	border-bottom: 1px solid black;
+}
+
+table tr:last-of-type{
+	border-bottom: hidden;
+}
+
+tbody tr:last-of-type{
+	border-bottom: 2px solid black;
+}
+
+.aimante {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+}
+
+/**/
+
+nav {
+	text-align: center;
+	margin-bottom: 7px;
+}
+
+nav button{
+	background-color: white;
+	padding: 3px;
+	text-transform: uppercase;
+	border: none;
+	box-shadow: 0px 0px 3px grey;
+}
+
+nav button:hover{
+	background-color: lightgrey;
+}
+
+#title_task, #title_user {
+	text-align: center;
+	font-weight: bold;
+	text-decoration-line: underline;
+}
+
+.chuispala {
+	display:none;
+}
+
+#pagination {
+	text-align: center;
+}
+
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width:100%;
+    grid-template-areas:
+      "a b"
+      "c d";
+    align-items: start;
+    text-align: center;
+    color: whitesmoke;
+    background-image: url("../images/agricole-blur.jpeg");
+    background-size: cover;
+    padding: 10% 0 10%;
+  }
+  @media (max-width: 755px){
+	.wrapper{
+		display: block;
+	}
+}
+
+
+  .cheapest {
+    grid-area: a;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: black;
+    padding: 5% 0 10%;
+  }
+  .popularest {
+    grid-area: b;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: black;
+    padding: 5% 0 10%;
+  }
+  .newest {
+    grid-area: c;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: black;
+    padding: 5% 0 10%;
+  }
+  .highestend {
+    grid-area: d;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: black;
+    padding: 5% 0 10%;
+  }
+  
+ #table * td:first-of-type, #table * th:first-of-type {
+    display: none;
+  }
