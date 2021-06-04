@@ -31,18 +31,18 @@ var borneplus = bornemoins.offsetTop + bornemoins.offsetHeight;
 
 // Pour y accéder : les_produits[0].nom 
 var les_produits=[
-  {id: 0, nom:'Fendt 1000 Vario', type:'Tracteur conventionnel', description:'le boss du quartier', annee_de_creation:2016, poids:'14000 kg', longueur:6350, largeur:2750, hauteur:3606, note: 4.9, prix:641000, nb_exemplaire:0},
-  {id: 1, nom:'TT504 50hp', type:'Tracteur conventionnel', description:'faispachier', annee_de_creation:1999, poids:'2285 kg', longueur:3579, largeur:1750, hauteur:2105, note: 4.3, prix:4500, nb_exemplaire:0},
-  {id: 2, nom:'Kubota B1500DT', type:'Micro tracteur', description:'faispachier', annee_de_creation:1982, poids:'545 kg', longueur:220, largeur:105, hauteur:120, note: 4.3, prix:3791, nb_exemplaire:0},
-  {id: 3, nom:'MTD 96', type:'Micro tracteur', description:'faispachier', annee_de_creation:1996, poids:'149 kg', longueur:170, largeur:107, hauteur:100, note: 4.3, prix:134465, nb_exemplaire:0},
-  {id: 4, nom:'Grégoire G5-320', type:'Tracteur enjambeur', description:'faispachier', annee_de_creation:2018, poids:'1052 kg', longueur:5240, largeur:2895, hauteur:3600, note: 4.3, prix:172000, nb_exemplaire:0},
-  {id: 5, nom:'Bobard Polybob', type:'Tracteur enjambeur', description:'faispachier', annee_de_creation:1927, poids:'387 kg', longueur:210, largeur:130, hauteur:180, note: 1.0, prix:1000, nb_exemplaire:0},
-  {id: 6, nom:'Eliatis Chaptrack 282', type:'Tracteur forestier', description:'faispachier', annee_de_creation:1994, poids:'23t', longueur:111, largeur:256, hauteur:3606, note: 4.3, prix:330000, nb_exemplaire:0},
-  {id: 7, nom:'Agrip JD 4000', type:'Tracteur forestier', description:'faispachier', annee_de_creation:1982, poids:'23t', longueur:111, largeur:256, hauteur:3606, note: 4.3, prix:1000, nb_exemplaire:0},
-  {id: 8, nom:'Reform METRAC H8X', type:'Tracteur de pente', description:'faispachier', annee_de_creation:2015, poids:'23t', longueur:111, largeur:256, hauteur:3606, note: 4.3, prix:78000, nb_exemplaire:0},
-  {id: 9, nom:'Reform METRAC 2002', type:'Tracteur de pente', description:'faispachier', annee_de_creation:1980, poids:'23t', longueur:111, largeur:256, hauteur:3606, note: 4.3, prix:841, nb_exemplaire:0},
-  {id: 10, nom:'1961 Lamborghini 5C Ercole', type:'Tracteur à chenille', description:'faispachier', annee_de_creation:1961, poids:'23t', longueur:111, largeur:256, hauteur:3606, note: 5, prix:28500, nb_exemplaire:0},
-  {id: 11, nom:'Steiger 500', type:'Tracteur à chenille', description:'faispachier', annee_de_creation:2018, poids:'23t', longueur:111, largeur:256, hauteur:3606, note: 4.7, prix:35760, nb_exemplaire:0}
+  {id: 0, nom:'Fendt 1000 Vario', type:'Tracteur conventionnel', description:'Il a pour seule limite l\'horizon de votre terrain.', annee_de_creation:2016, poids:'14000 kg', longueur:6350, largeur:2750, hauteur:3606, note: 4.9, prix:64100},
+  {id: 1, nom:'TT504 50hp', type:'Tracteur conventionnel', description:'Idéal pour les petites productions agricoles.', annee_de_creation:1999, poids:'2285 kg', longueur:3579, largeur:1750, hauteur:2105, note: 3.9, prix:4500},
+  {id: 2, nom:'Kubota B1500DT', type:'Micro tracteur', description:'Simple et fiable depuis 1982.', annee_de_creation:1982, poids:'545 kg', longueur:220, largeur:105, hauteur:120, note: 3.5, prix:3791},
+  {id: 3, nom:'MTD 96', type:'Micro tracteur', description:'Une tondeuse à gazon idéale pour des terrains agricoles.', annee_de_creation:1996, poids:'149 kg', longueur:170, largeur:107, hauteur:100, note: 3, prix:1199},
+  {id: 4, nom:'Grégoire G5-320', type:'Tracteur enjambeur', description:'Parfait pour de grands terrains à exploitation commerciale.', annee_de_creation:2018, poids:'1052 kg', longueur:5240, largeur:2895, hauteur:3600, note: 4.5, prix:172000},
+  {id: 5, nom:'Bobard Polybob', type:'Tracteur enjambeur', description:'Honnêtement, pas la meilleure option ...', annee_de_creation:1927, poids:'387 kg', longueur:210, largeur:130, hauteur:180, note: 1.0, prix:1000},
+  {id: 6, nom:'Eliatis Chaptrack 282', type:'Tracteur forestier', description:'Opérationel partout', annee_de_creation:1994, poids:'8000 kg', longueur:2750, largeur:2056, hauteur:3606, note: 3.9, prix:33000},
+  {id: 7, nom:'Agrip JD 4000', type:'Tracteur forestier', description:'Promotion flash, idéale pour de grandes forêts', annee_de_creation:1982, poids:'12000 kg', longueur:2604, largeur:2560, hauteur:2700, note: 3.2, prix:1000},
+  {id: 8, nom:'Reform METRAC H8X', type:'Tracteur de pente', description:'Faites la différence avec le tracteur sport par excellence.', annee_de_creation:2015, poids:'350 kg', longueur:192, largeur:180, hauteur:200, note: 4, prix:78000},
+  {id: 9, nom:'Reform METRAC 2002', type:'Tracteur de pente', description:'Véhicule de transport pour tout terrain agricole.', annee_de_creation:1980, poids:'350 kg', longueur:102, largeur:190, hauteur:150, note: 2.6, prix:841},
+  {id: 10, nom:'1961 Lamborghini 5C Ercole', type:'Tracteur à chenille', description:'La puissance à l\'Italienne.', annee_de_creation:1961, poids:'600 kg', longueur:100, largeur:256, hauteur:3606, note: 5, prix:28500},
+  {id: 11, nom:'Steiger 500', type:'Tracteur à chenille', description:'Moderne et fiable pour la finition de la terre', annee_de_creation:2018, poids:'10000 kg', longueur:6000, largeur:2800, hauteur:3200, note: 4.7, prix:35760}
 
 ];
 
@@ -59,15 +59,20 @@ function crea_recherche(){
   /* <option value="nom">Nom</option> */
 }
 
+function strSort(a) {
+  return a.sort(function(x,y) {
+    return x.nom.toUpperCase().localeCompare(y.nom.toUpperCase());
+  });
+}
+
 function recherche(){
   //document.getElementById('recherche').innerHTML = "";
   var le_tri = document.getElementById('tri').value;
   console.log(le_tri);
-  var liste_tri;
   if(le_tri=='nom'){
     les_produits.sort(function(first, second) {
-      var name1 = first.nom.toLowerCase();
-      var name2 = second.nom.toLowerCase();
+      var name1 = first.nom.toUpperCase();
+      var name2 = second.nom.toUpperCase();
       if (name1 > name2) {
         return 1;
       } else if (name1 < name2){
@@ -131,9 +136,12 @@ function recherche(){
         ma_page.innerHTML += (crea_1_produit(key));
       }
     }
-    if (ma_page.innerHTML == ""){
-      ma_page.innerHTML = "<div>Nous n'avons trouvé aucun résultat</div>";
-    }
+  } else {
+    suicide_recherche();
+  }
+  
+  if (ma_page.innerHTML == ""){
+    ma_page.innerHTML = "<div>Nous n'avons trouvé aucun résultat</div>";
   }
   les_produits.sort(function(first, second) {
     return first.id - second.id;
@@ -151,9 +159,9 @@ function suicide_recherche(){
 function crea_1_produit(num){
   // c'est pour l'affichage, car aprés on va afficher les produits sur des pages par 10 (à voir) et faire des recherches
   return '<div id="produit_'+les_produits[num].id+'" class="produit"><img src="images/'+les_produits[num].id
-  +'.png"><div class="info_produit">'+les_produits[num].nom+'<div class="description_produit">'+les_produits[num].description
+  +'.png"><div class="all_info"><div class="info_produit">'+les_produits[num].nom+'</div><div class="description_produit">'+les_produits[num].description
   +'</div><div class="note_produit">'+les_produits[num].note+'/5 *</div><div class="cout_produit">'+les_produits[num].prix
-  +' €</div><div class="add_button" onclick="ajouterDevis('+les_produits[num].id+');"><button type="button">Ajouter au devis</button></div></div></div>';
+  +' €</div><div class="add_button" onclick="ajouterDevis('+les_produits[num].id+')"><button type="button">Ajouter au devis</button></div></div></div>';
 }
 
 function crea_produit(){
@@ -393,25 +401,3 @@ function ajouterDevis(key = document.getElementById('role').options[document.get
   }
   
 }
-
-
-/*
-function action_precedent(){
-  let minimum = 0;
-  if (page - 1 >= minimum){
-      page -= 1;
-      update_Task(page);
-  }else{
-      alert("Impossible de revenir en arrière.");
-  }
-}
-
-function action_suivant(){
-  let maximum = document.info.length / 10;
-  if (page + 1 < maximum){
-      page += 1;
-      update_Task(page);
-  }else{
-      alert("Impossible de continuer.");
-  }
-}*/

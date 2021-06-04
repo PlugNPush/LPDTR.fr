@@ -71,7 +71,7 @@
                             <button type="button" onclick="ajouterDevis()" id="bsub">
                             Ajouter au devis
                             </button>
-                            <button type="reset" class="disabled" onclick="suicide()">
+                            <button type="reset" class="danger" onclick="suicide()">
                             Tout supprimer
                             </button>
                         </div>
@@ -79,8 +79,8 @@
                 </div>
             </header>
             <main class="main">
+                <p id="title_user">Bon de commande - DEVIS</p>
                 <table id="table">
-                    <p id="title_user">Bon de commande - DEVIS</p>
                     <tr>
                         <th>ID</th>
                         <th>Nom</th>
@@ -95,44 +95,89 @@
             </main>
 
         </div>
+        <!--Page Avis-->
 
         <div id="avis" class="avis chuispala">
-            <h1>AVIS</h1>
+            <div class="commentaire">
+                <section id="section1"> <!--Rectangle numéro 1 vert avec l'avis numéro 1-->
+                    <h2>Très bonne entreprise</h2>
+                    <p>Entreprise vendant du matériel de bonne qualité, vendeurs souriant et agréable. J'y suis allée, sur conseils de mes amis afin de regarder différents modèles de tracteurs et j'ai trouvé ce que je souhaitais.</p>
+                        <img src="images/Femme_avis.jpg"  width="100" height="150" alt="avis n°1">
+                        <img src="images/5_etoiles.png" width="122" height="34" alt="étoile n°1">
+                </section>
+                <section id="section2"> 
+                    <h2>Produits de bonne qualité</h2>
+                    <p>Magasin bien aménagé, produits neufs et de bonne qualité. J'ai contacté cette société car j'avais besoin de commander une tondeuse autoportée (modèle MTD 96). Je suis très satisfait de mon produit et je recommande cette enseigne.</p>
+                        <img src="images/Homme_avis.jpg" width="100" height="150" alt="avis n°2">
+                        <img src="images/5_etoiles.png" width="122" height="34" alt="étoile n°2">
+                </section>
+                <section id="section3">
+                    <h2>Très satisfait de mon tracteur Kubota B1500DT</h2>
+                    <p>En juin 2020, suite au déconfinement, j'ai décidé de déménager à la campagne. J'ai donc voulu acquérir un tracteur afin de m'occuper de mon jardin. J'avais déjà commandé du matériel auparavant et je ne suis jamais déçu par cette société. J'ai mis 5 étoiles, soit une que sur les avis Google car cette société à enfin un site internet, ce que je déplorais.</p>
+                        <img src="images/Homme_2_avis.jpg" width="100" height="150" alt="avis n°3">
+                        <img src="images/4_etoiles.png" width="122" height="34" alt="étoile n°3">
+                </section>
+            </div>    
+            <div class="aside_avis">
+                <h2> Laissez-nous un avis et un commentaire</h2>
+                <p>Si nos produits vous plaisent, n'hésitez pas à nous laisser des commentaires afin de savoir notre travail vous plaît ou si vous pensez qu'il y a des points sur lesquels il faudrait que l'on s'améliore.</p>
+                <h2>Avez-vous une question ?</h2>
+                <p>Vous avez des questions concernant la disponibilité d'un de nos produits ? Contacter nous au 08-90-10-92-86 ou à l'adresse mail suivante : <a href="mailto:societe.cherau@orange.fr">societe.cherau@orange.fr</a></p>
+                <h2>Remerciements à l'EFREI Paris</h2>
+                <p>Nous remercions les quatre élèves de l'école EFREI Paris, école d'Ingénieurs Généraliste du Numérique, qui nous a conçu ce site internet.</p>
+            </div>
         </div>
 
-        <div id="propos" class="props chuispala">
-            <h1>ON A DES TRACTEURS LOURDS SA MÈRE</h1>
-            <h3>Notre site sert d'intermédaire entre une entreprise agricole et des consomateurs travaillant dans le domaine de l'agriculture.
+        <div id="propos" class="propos chuispala">
+            <div class="about">
+                <h3>Notre site sert d'intermédaire entre une entreprise agricole et des consomateurs travaillant dans le domaine de l'agriculture.<br><br>
 
-                En effet, l'entreprise CHEREAU à du mal à renseigner ses offres ou ses demandes aux potentiels clients.
+                    En effet, l'entreprise CHEREAU à du mal à renseigner ses offres ou ses demandes aux potentiels clients.<br><br>
+    
+                    C'est pour cela, qu'en bon étudiant en école ingénieur que nous sommes, que nous aidons au mieux cet entreprise pour qu'elle s'épanouise aux travers de ses ventes.<br><br>
+                    
+                    Nous mettons en lumières les différents modèles de tracteurs disponible ainsi que leur quantités.<br><br>
+    
+                    De plus, nous permetont aux particuliers de remplir un formulaire afin de commander un produit en renseignant leur choix de modèle ainsi que la quantité voulue.<br><br>
+    
+                    Des liens sont à disposition pour réserver directement sur le site officiel CHEREAU.
+            
+                <br><br><br>Tâches remplies :<br>
+                <div class="tasktable">
+                    <table class="tasktable">
+                        <th>Arnaud BATISTA</th>
+                        <th>Nassim BELLIK</th>
+                        <th>Vincent MARGUET</th>
+                        <th>Michaël NASS</th>
+                        <tr>
+                            <td>Page avis, bas de page</td>
+                            <td>Page produit et à propos, tableau dynamique, classifications des données, powerpoint</td>
+                            <td>Page accueil et produit, mise en page css, liens</td>
+                            <td>Page devis, mode mobile, interface accueil, powerpoint</td>
+                        </tr>
+                    </table>
+                </div>
+    
+                </h3>
+            </div>
 
-                C'est pour cela, qu'en bon étudiant en école ingénieur que nous sommes, que nous aidons au mieux cet entreprise pour qu'elle s'épanouise aux travers de ses ventes.
-                
-                Nous mettons en lumières les différents modèles de tracteurs disponible ainsi que leur quantités.
-
-                De plus, nous permetont aux particuliers de remplir un formulaire afin de commander un produit en renseignant leur informtions personnels et le type de reception (à domicile ou autre).
-
-                Des liens sont à disposition pour une transarence dans l'utilsation des données 
-            </h3>
-        
-            <p>Tâches remplies :</p>
-            <th>BATISTA Arnaud -> page avis, css,        </th>
-            <th>BELLIK Nassim -> page produit et à propo, js          </th>
-            <th>MARGUET Vincent -> page accueil, page produit, html/css/js,          </th>
-            <th>NASS Michael -> page devis,            </th>
-            <th>Sources :</th>
-                https://www.fendt.com/fr/geneva-assets/widget/28272/news-2-crop.jpg
-                https://sc04.alicdn.com/kf/HTB1lhRzXoLrK1Rjy1zbq6AenFXa6.jpg
-                https://lh3.googleusercontent.com/proxy/YsQ80RspJm7eVX67CoknnL6MDovJaujT_BUGdzSw1eVwO006GH9Q-0z3HS1td6mPHUz340QDHP05hHwoqhTE-EIYGnUwMqae2PSBcwkhEczpZUlL2tI0eNmRofV1CLYXdw
-                https://www.mtdfrance.fr/sites/default/files/styles/product_crop/public/upload/product/img/MTD%2096.jpg?h=259c78bd&itok=j4XUz_RY
-                https://www.vignovin.com/images/stories/partenaires/gregoire/actualites/g5-310-320/g5-320-tracteur-vigne-etroite.jpg
-                https://i.servimg.com/u/f44/15/84/06/83/tm/bizare11.jpg
-                https://www.eliatis.com/IMG/jpg/51510895_421300918622946_2077982667604754432_n.jpg
-                https://agrip.fr/wp-content/uploads/2016/04/agrip-pieces-detachees-maintenance-tracteurs-engins-agricoles-forestiers-industriels-jd5000-800x800.jpg
-                https://www.reform.at/fileadmin/_processed_/4/2/csm_metrac-H7RX-09-2015_Logo-neu_01_3adea0a883.jpg
-                https://de.tec24.com/13/16034/800/800/6046980_0.jpg
-                https://www.artcurial.com/sites/default/files/styles/840_width/public/lots-images/2019-02-01-15/3888_10649706_0.jpg?itok=DCsymmFl
-                https://img.agriexpo.online/fr/images_ag/photo-g/168666-10252661.jpg
+            <div class="sources">
+                <p>Sources :<br>
+                    <a href="https://www.fendt.com/fr/geneva-assets/widget/28272/news-2-crop.jpg">Fendt</a><br>
+                    <a href="https://sc04.alicdn.com/kf/HTB1lhRzXoLrK1Rjy1zbq6AenFXa6.jpg">Alicdn.com</a><br>
+                    <a href="https://lh3.googleusercontent.com/proxy/YsQ80RspJm7eVX67CoknnL6MDovJaujT_BUGdzSw1eVwO006GH9Q-0z3HS1td6mPHUz340QDHP05hHwoqhTE-EIYGnUwMqae2PSBcwkhEczpZUlL2tI0eNmRofV1CLYXdw">Google User Content</a><br>
+                    <a href="https://www.mtdfrance.fr/sites/default/files/styles/product_crop/public/upload/product/img/MTD%2096.jpg?h=259c78bd&itok=j4XUz_RY">MTD France</a><br>
+                    <a href="https://www.vignovin.com/images/stories/partenaires/gregoire/actualites/g5-310-320/g5-320-tracteur-vigne-etroite.jpg">Vignovin</a><br>
+                    <a href="https://i.servimg.com/u/f44/15/84/06/83/tm/bizare11.jpg">Servimg</a><br>
+                    <a href="https://www.eliatis.com/IMG/jpg/51510895_421300918622946_2077982667604754432_n.jpg">Eliatis</a><br>
+                    <a href="https://agrip.fr/wp-content/uploads/2016/04/agrip-pieces-detachees-maintenance-tracteurs-engins-agricoles-forestiers-industriels-jd5000-800x800.jpg">Agrip</a><br>
+                    <a href="https://www.reform.at/fileadmin/_processed_/4/2/csm_metrac-H7RX-09-2015_Logo-neu_01_3adea0a883.jpg">Reform<br>
+                    <a href="https://de.tec24.com/13/16034/800/800/6046980_0.jpg">Tec24 Deutschland</a><br>
+                    <a href="https://www.artcurial.com/sites/default/files/styles/840_width/public/lots-images/2019-02-01-15/3888_10649706_0.jpg?itok=DCsymmFl">Artcurial</a><br>
+                    <a href="https://img.agriexpo.online/fr/images_ag/photo-g/168666-10252661.jpg">Agriexpo</a>
+                </p>
+            </div>
+            
         </div>
         
         <!--pied de page-->
