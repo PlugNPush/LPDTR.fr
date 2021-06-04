@@ -55,7 +55,7 @@ var les_produits=[
 function crea_recherche(){
   //console.log(document.getElementById("recherche_produit"));
   document.getElementById("recherche_produit").innerHTML = '<input type="text" id="recherche" name="recherche" placeholder="Saisissez votre Recherche"><select id="tri"><optgroup label="Tri"><option value="nom">Nom</option><option value="type">Type</option><option value="annee_de_creation+">Année de création+</option><option value="annee_de_creation-">Année de création-</option><option value="prix+">Prix+</option><option value="prix-">Prix-</option><option value="note+">Note+</option><option value="note-">Note-</option></optgroup></select><button type="button" id="recherche_button" onclick="recherche()">Rechercher</button><button type="reset" onclick="suicide_recherche()">Annuler</button>';
-  recherche();
+  //recherche();
   /* <option value="nom">Nom</option> */
 }
 
@@ -84,7 +84,15 @@ function recherche(){
   }
   else if (le_tri=='type'){
     les_produits.sort(function(first, second) {
-      return first.type - second.type;
+      var type1 = first.type.toUpperCase();
+      var type2 = second.type.toUpperCase();
+      if (type1 > type2) {
+        return 1;
+      } else if (type1 < type2){
+        return -1;
+      } else {
+        return 0;
+      };
     });
   }
   else if (le_tri=='annee_de_creation+'){
