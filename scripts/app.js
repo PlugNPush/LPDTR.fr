@@ -368,9 +368,7 @@ function ajouterDevis(key = document.getElementById('role').options[document.get
     document.getElementById('table').appendChild(section);
   }
 
-  for (var i = 1, row; row = table.rows[i]; i++) {
-    totalDevis += row.cells[3].textContent * row.cells[4].textContent;
-  }
+  totalDevis += les_produits[key].prix;
             
   totalQte = totalQte + 1;
 
