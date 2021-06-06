@@ -23,8 +23,6 @@ const defaulttable = document.getElementById('table').innerHTML;
 var bornemoins = document.getElementById("formonly");
 var borneplus = bornemoins.offsetTop + bornemoins.offsetHeight;
 
-// ----- Buttons -----
-
 /*----- ----- ----- ----- ----- ----- ----- ----- ----- -----
     Bibliotheque
 ----- ----- ----- ----- ----- ----- ----- ----- ----- -----*/
@@ -54,19 +52,11 @@ var les_produits=[
 
 function crea_recherche(){
   //console.log(document.getElementById("recherche_produit"));
-  document.getElementById("recherche_produit").innerHTML = '<input type="text" id="recherche" name="recherche" placeholder="Saisissez votre Recherche"><select id="tri"><optgroup label="Tri"><option value="nom">Nom</option><option value="type">Type</option><option value="annee_de_creation+">Année de création+</option><option value="annee_de_creation-">Année de création-</option><option value="prix+">Prix+</option><option value="prix-">Prix-</option><option value="note+">Note+</option><option value="note-">Note-</option></optgroup></select><button type="button" id="recherche_button" onclick="recherche()">Rechercher</button><button type="reset" onclick="suicide_recherche()">Annuler</button>';
-  //recherche();
+  document.getElementById("recherche_produit").innerHTML = '<input type="text" id="recherche" name="recherche" placeholder="Saisissez votre Recherche"><select id="tri"><optgroup label="Tri"><option value="nom">Nom</option><option value="type">Type</option><option value="annee_de_creation+">Année de création+</option><option value="annee_de_creation-">Année de création-</option><option value="prix+">Prix+</option><option value="prix-">Prix-</option><option value="note+">Note+</option><option value="note-">Note-</option></optgroup></select><button type="button" id="recherche_button" onclick="recherche()">Rechercher</button><button type="reset" class="danger" onclick="suicide_recherche()">Annuler</button>';
   /* <option value="nom">Nom</option> */
 }
 
-function strSort(a) {
-  return a.sort(function(x,y) {
-    return x.nom.toUpperCase().localeCompare(y.nom.toUpperCase());
-  });
-}
-
 function recherche(){
-  //document.getElementById('recherche').innerHTML = "";
   var le_tri = document.getElementById('tri').value;
   console.log(le_tri);
   if(le_tri=='nom'){
@@ -180,49 +170,6 @@ function crea_produit(){
   
 }
 
-// ----- JSP -----
-
-function createHome(){
-  
-  les_produits.sort(function(first, second) {
-    return first.prix - second.prix;
-   });
-  document.getElementById("cheapest").innerHTML += crea_1_produit(0)
-  
-  les_produits.sort(function(first, second) {
-    return second.note - first.note;
-   });
-  document.getElementById("popularest").innerHTML += crea_1_produit(0);
-  les_produits.sort(function(first, second) {
-    return second.annee_de_creation - first.annee_de_creation;
-   });
-  document.getElementById("newest").innerHTML += crea_1_produit(0);
-  les_produits.sort(function(first, second) {
-    return second.prix - first.prix;
-   });
-  document.getElementById("highestend").innerHTML += crea_1_produit(0);
-
-  les_produits.sort(function(first, second) {
-    return first.id - second.id;
-   });
-}
-createHome();
-
-function fetchProduitsDevis() {
-  for(var key in les_produits) {
-    var value = les_produits[key];
-
-    var text = les_produits[key].type + " " + les_produits[key].nom + " " + les_produits[key].poids + " (" + les_produits[key].prix + "€)";
-
-    var section = new Option(text, key);
-
-		document.getElementById('role').appendChild(section);
-
-  }
-}
-
-fetchProduitsDevis();
-
 /*----- ----- ----- ----- ----- ----- ----- ----- ----- -----
     MAIN
 ----- ----- ----- ----- ----- ----- ----- ----- ----- -----*/
@@ -244,7 +191,7 @@ function create_prod(){
   prod.classList.add("chuisla");
   nav_prod.classList.add("active");
   crea_recherche();
-  crea_produit();
+  suicide_recherche();
 }
 
 function create_devis(){
@@ -297,10 +244,38 @@ function removeAll(){
 
     var x = document.getElementById("myTopnav");
     if (x.className !== "topnav") {
-      myFunction();
+      responsiveSwitch();
     }
     
 }
+
+// ----- Page d'accueil -----
+
+function createHome(){
+  
+  les_produits.sort(function(first, second) {
+    return first.prix - second.prix;
+   });
+  document.getElementById("cheapest").innerHTML += crea_1_produit(0)
+  
+  les_produits.sort(function(first, second) {
+    return second.note - first.note;
+   });
+  document.getElementById("popularest").innerHTML += crea_1_produit(0);
+  les_produits.sort(function(first, second) {
+    return second.annee_de_creation - first.annee_de_creation;
+   });
+  document.getElementById("newest").innerHTML += crea_1_produit(0);
+  les_produits.sort(function(first, second) {
+    return second.prix - first.prix;
+   });
+  document.getElementById("highestend").innerHTML += crea_1_produit(0);
+
+  les_produits.sort(function(first, second) {
+    return first.id - second.id;
+   });
+}
+createHome();
 
 /*----- ----- ----- ----- ----- ----- ----- ----- ----- -----
     Barre de navigation
@@ -310,13 +285,13 @@ function test_responsive(){
   if (window.outerWidth>600){
     var x = document.getElementById("myTopnav");
     if (x.className !== "topnav") {
-      myFunction();
+      responsiveSwitch();
     }
   }
 }
 
 /* Toggle entre ajouter et enlever la classe "responsive" de topnav quand l'utilisateur clique sur l'icon */
-function myFunction() {
+function responsiveSwitch() {
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
       x.className += " responsive";
@@ -330,6 +305,21 @@ function myFunction() {
 ----- ----- ----- ----- ----- ----- ----- ----- ----- -----*/
 
 // ----- Formulaire -----
+
+function fetchProduitsDevis() {
+  for(var key in les_produits) {
+    var value = les_produits[key];
+
+    var text = les_produits[key].type + " " + les_produits[key].nom + " " + les_produits[key].poids + " (" + les_produits[key].prix + "€)";
+
+    var section = new Option(text, key);
+
+		document.getElementById('role').appendChild(section);
+
+  }
+}
+
+fetchProduitsDevis();
 
 function suicide(){
   document.getElementById('table').innerHTML = defaulttable;

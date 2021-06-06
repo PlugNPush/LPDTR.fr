@@ -14,7 +14,7 @@
             <a href="#" id="nav_devis" onclick="create_devis()">Devis<span id="devisQteMenu"></span></a>
             <a href="#" id="nav_avis" onclick="create_avis()">Avis</a>
             <a href="#" id="nav_propos" onclick="create_propos()">À&nbsp;propos</a> <!-- &nbsp; = NON-BREAKING SPACE -->
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+            <a href="javascript:void(0);" class="icon" onclick="responsiveSwitch()">&#9776;</a>
         </div>
             
 
@@ -44,7 +44,7 @@
                 <div class="highendcontent">
                     <h1>La Rolls-Royce des tracteurs</h1>
                     <div class="highestend" id="highestend">
-                    </div> 
+                    </div>
                 </div>
                 
             </div>
@@ -57,7 +57,6 @@
         </div>
 
         <div id="devis" class="devis chuispala">
-            
             <header>
                 <div>
                     <form class="main" id="formonly">
@@ -78,7 +77,7 @@
                 </div>
             </header>
             <main class="main">
-                <p id="title_user">Bon de commande - DEVIS</p>
+                <p id="title_table">Bon de commande - DEVIS</p>
                 <table id="table">
                     <tr>
                         <th>ID</th>
@@ -94,34 +93,35 @@
             </main>
 
         </div>
+
         <!--Page Avis-->
 
         <div id="avis" class="avis chuispala">
             <div class="commentaire">
-                <section id="section1"> <!--Rectangle numéro 1 vert avec l'avis numéro 1-->
+                <section id="section1"> 
                     <h2>Très bonne entreprise</h2>
-                    <p>Entreprise vendant du matériel de bonne qualité, vendeurs souriant et agréable. J'y suis allée, sur conseils de mes amis afin de regarder différents modèles de tracteurs et j'ai trouvé ce que je souhaitais.</p>
+                    <p>Entreprise vendant du matériel de bonne qualité, vendeurs souriant et agréable. J'y suis allée, sur conseils de mes amis, afin de regarder différents modèles de tracteurs et j'ai trouvé tout ce que je souhaitais.</p>
                         <img src="images/Femme_avis.jpg"  width="100" height="150" alt="avis n°1">
                         <img src="images/5_etoiles.png" width="122" height="34" alt="étoile n°1">
                 </section>
-                <section id="section2"> 
-                    <h2>Produits de bonne qualité</h2>
-                    <p>Magasin bien aménagé, produits neufs et de bonne qualité. J'ai contacté cette société car j'avais besoin de commander une tondeuse autoportée (modèle MTD 96). Je suis très satisfait de mon produit et je recommande cette enseigne.</p>
+                <section id="section2">
+                    <h2>Produits de très bonne qualité !</h2>
+                    <p>Magasin bien aménagé, produits neufs et de bonne qualité. J'ai contacté cette société car j'avais besoin de commander une tondeuse autoportée (modèle MTD 96). Je suis très satisfait de mon produit et je recommande vivement cette enseigne.</p>
                         <img src="images/Homme_avis.jpg" width="100" height="150" alt="avis n°2">
                         <img src="images/5_etoiles.png" width="122" height="34" alt="étoile n°2">
                 </section>
                 <section id="section3">
                     <h2>Très satisfait de mon tracteur Kubota B1500DT</h2>
-                    <p>En juin 2020, suite au déconfinement, j'ai décidé de déménager à la campagne. J'ai donc voulu acquérir un tracteur afin de m'occuper de mon jardin. J'avais déjà commandé du matériel auparavant et je ne suis jamais déçu par cette société. J'ai mis 5 étoiles, soit une que sur les avis Google car cette société à enfin un site internet, ce que je déplorais.</p>
+                    <p>En juin 2020, suite au déconfinement, j'ai décidé de déménager à la campagne. J'ai donc voulu acquérir un tracteur afin de m'occuper de mon jardin. J'avais déjà commandé du matériel auparavant et je ne suis jamais déçu par cette société. J'ai mis 5 étoiles, soit une de plus que sur les avis Google car cette société à enfin un site internet, ce que je déplorais.</p>
                         <img src="images/Homme_2_avis.jpg" width="100" height="150" alt="avis n°3">
-                        <img src="images/4_etoiles.png" width="122" height="34" alt="étoile n°3">
+                        <img src="images/5_etoiles.png" width="122" height="34" alt="étoile n°3">
                 </section>
-            </div>    
+            </div>
             <div class="aside_avis">
                 <h2> Laissez-nous un avis et un commentaire</h2>
-                <p>Si nos produits vous plaisent, n'hésitez pas à nous laisser des commentaires afin de savoir notre travail vous plaît ou si vous pensez qu'il y a des points sur lesquels il faudrait que l'on s'améliore.</p>
+                <p>Si nos produits vous plaisent, n'hésitez pas à nous laisser des commentaires afin de savoir si notre travail vous plaît ou si vous pensez qu'il y a des points sur lesquels il faudrait que l'on s'améliore.</p>
                 <h2>Avez-vous une question ?</h2>
-                <p>Vous avez des questions concernant la disponibilité d'un de nos produits ? Contacter nous au 08-90-10-92-86 ou à l'adresse mail suivante : <a href="mailto:societe.cherau@orange.fr">societe.cherau@orange.fr</a></p>
+                <p>Vous avez des questions concernant la disponibilité d'un de nos produits ? Contactez-nous au 08-90-10-92-86 ou à l'adresse mail suivante : <a href="mailto:societe.cherau@orange.fr">societe.cherau@orange.fr</a></p>
                 <h2>Remerciements à l'EFREI Paris</h2>
                 <p>Nous remercions les quatre élèves de l'école EFREI Paris, école d'Ingénieurs Généraliste du Numérique, qui nous a conçu ce site internet.</p>
             </div>
@@ -129,15 +129,15 @@
 
         <div id="propos" class="propos chuispala">
             <div class="about">
-                <h3>Notre site sert d'intermédaire entre une entreprise agricole et des consomateurs travaillant dans le domaine de l'agriculture.<br><br>
+                <h3>Notre site sert d'intermédaire entre une entreprise agricole et des consommateurs travaillant dans le domaine de l'agriculture.<br><br>
 
-                    En effet, l'entreprise CHEREAU à du mal à renseigner ses offres ou ses demandes aux potentiels clients.<br><br>
+                    En effet, l'entreprise CHEREAU a du mal à renseigner ses potentiels clients sur ses produits et à répondre à leurs demandes.<br><br>
     
-                    C'est pour cela, qu'en bon étudiant en école ingénieur que nous sommes, que nous aidons au mieux cet entreprise pour qu'elle s'épanouise aux travers de ses ventes.<br><br>
+                    C'est pour cela, qu'en bons étudiants d'école d'ingénieur, nous aidons au mieux cette entreprise pour qu'elle se développe grâce à ses ventes.<br><br>
                     
-                    Nous mettons en lumières les différents modèles de tracteurs disponible ainsi que leur quantités.<br><br>
+                    Nous mettons en lumières les différents modèles de tracteurs disponibles ainsi que leurs quantités.<br><br>
     
-                    De plus, nous permetont aux particuliers de remplir un formulaire afin de commander un produit en renseignant leur choix de modèle ainsi que la quantité voulue.<br><br>
+                    De plus, nous permettons aux clients de remplir un formulaire afin de commander un produit en renseignant leur choix de modèle ainsi que la quantité voulue.<br><br>
     
                     Des liens sont à disposition pour réserver directement sur le site officiel CHEREAU.
                 </h3>
@@ -218,7 +218,7 @@
                     </div>
                 </div>
                 <hr>
-                <p class="Copyright">Copyright 2021 - Projet Programmation WEB</p>
+                <p class="copyright">Copyright 2021 - Projet Programmation WEB</p>
             </div>
         </div>
         <script src="scripts/app.js"></script>  
