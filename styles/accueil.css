@@ -87,7 +87,7 @@ tbody tr:last-of-type {
     display: flex;
 }
 
-.topnav .responsive {
+.topnav.responsive {
     display: block;
 }
 
@@ -128,22 +128,22 @@ tbody tr:last-of-type {
   
 /* Rend la navigation bar responsive sur mobile */
 @media screen and (max-width: 755px) {
-    .topnav a:not(:first-child), .dropdown .dropbtn {
+    .topnav a:not(:first-child) {
       display: none;
     }
-    .topnav a .icon {
+    .topnav a.icon {
       float: right;
       display: flex;
     }
-    .topnav .responsive {
+    .topnav.responsive {
         position: relative;
     }
-    .topnav .responsive a .icon {
+    .topnav.responsive a.icon {
       position: absolute;
       right: 0;
       top: 0;
     }
-    .topnav .responsive a {
+    .topnav.responsive a {
       float: none;
       display: flex;
       text-align: left;
@@ -247,11 +247,22 @@ tbody tr:last-of-type {
     width:100%;
     background-color: white;
     justify-content: center;
+    z-index: 1;
 }
 
 #tri {
     width:135px;
     max-width: 300px;
+}
+
+@media (max-width: 755px) {
+	.recherche_produit {
+		flex-direction: column;
+	}
+    #tri {
+        width: 100%;
+        max-width: 98%;
+    }
 }
 
 /*-------------------Produit----------------------*/
@@ -283,7 +294,7 @@ tbody tr:last-of-type {
 .produit img {
     width: 50%;
     max-height: none;
-    height: 0px auto;
+    height: 100%;
     opacity: 0.90;
 }
 
@@ -321,12 +332,9 @@ tbody tr:last-of-type {
 	display: flex;
 }
 
-.aimante {
-    position: fixed;
+.aimant {
+    position : sticky;
     top: 0;
-    left: 50%;
-    width: 100%;
-    transform: translateX(-50%);
 }
 
 @media (max-width: 755px) {
@@ -425,6 +433,7 @@ tbody tr:last-of-type {
     grid-area: sidebar; /* le aside se place juste après le sidebar et donc il apparait sous la section principale*/
     background-color:  rgb(142, 231, 142);
     padding: 10px;
+    word-break: break-word;
 }
 
 /*----- ----- ----- ----- ----- ----- ----- ----- ----- -----
@@ -443,7 +452,8 @@ tbody tr:last-of-type {
 }
 
 .sources, .about {
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 @media only screen and (max-width : 755px) {
@@ -454,17 +464,29 @@ tbody tr:last-of-type {
 
 /*------------------About---------------------*/
 
+.about h3, .about #tasktable{
+    border: 3px solid green;
+    background-color: white;
+    padding: 10px;
+    margin: 5px;
+}
+
 .tasktable {
     overflow: scroll;
     border: 2px black;
-    width: 100%;
+    width: auto;
     height: auto;
     background-color: white;
 }
 
 /*------------------Sources---------------------*/
 
-
+.sources {
+    padding: 10px;
+    min-width: 120px;
+    word-break: break-word;
+    background-color: lightgreen;
+}
 
 /*----- ----- ----- ----- ----- ----- ----- ----- ----- -----
     Footer
@@ -475,18 +497,18 @@ tbody tr:last-of-type {
     background-color: #000;
     color: #8a8a8a;
     font-size: 14px;
-    padding: 60px 0 20px;
+    padding: 40px 0 20px;
 }
 
 .row {
     display: flex; /*les éléments du footer sont à l'horizontal*/ 
     flex-wrap: wrap; /*les éléments vont à la ligne lorsque l'on réduit la taille de la fenêtre*/
     align-items: center; /*alignement des éléments*/
-    justify-content: space-around; 
+    justify-content: space-around;
 }
 
 .footer p { /*paragraphe dans le pied de page*/
-    color: #8a8a8a; /*couleur*/
+    color: whitesmoke; /*couleur*/
 }
 
 .footer h3 { /*titre dans le pied de page*/
@@ -496,16 +518,13 @@ tbody tr:last-of-type {
 
 .colonne_1, .colonne_2, .colonne_3, .colonne_4 {
     margin-bottom: 20px;
-    min-width: 250px;
 }
 
 .colonne_1 { /*Développeurs du site*/
-    margin-left: 25px;
-    flex-basis: 26%;
+    text-align: center;
 }
 
 .colonne_2 { /*texte pour la société CHERAU*/
-    flex : 1;
     text-align: center;
 }
 
@@ -513,11 +532,14 @@ tbody tr:last-of-type {
     width: 180px;
     margin-bottom: 10px; /*espace entre l'image et le texte*/
     justify-content: center;
+    background-color: white;
+    border: 10px solid white;
+    border-radius: 3%;
 }
 
 .colonne_3, .colonne_4 { /*Nos Informations, Nos réseaux sociaux*/
-     text-align: center;
-     list-style-type: none;  
+    text-align: center;
+    list-style-type: none;  
 }
 
 ul {
@@ -534,15 +556,19 @@ ul, li {
     background: #dbd1d1;/*sépration avec la partie Copyright*/
     margin:19px 0;
     height: 1px; /*espace entre le Copyright et l'autre partie du footer*/
+}
 
+.footer a {
+    color: lightskyblue;
 }
 
 .copyright {
     text-align: center;
+    word-break: break-word;
 }
 
 /*max = si l'écran est inférieur ou égal à alors {...}*/
-@media (max-width : 1200px) {
+@media (max-width : 1000px) {
     .row {
         flex-direction: column;
         text-align: center;

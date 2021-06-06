@@ -4,66 +4,68 @@
         <title>EFREI FARMING</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <link rel="stylesheet" type="text/css" href="styles/accueil.css"> 
-        <link rel="icon" href="images/img-icon.ico"> 
+        <link rel="icon" href="favicon.ico">
+        <link rel="apple-touch-icon" href="favicon.ico">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="viewport" content = "width = device-width, initial-scale = 1, user-scalable = yes" />
     </head>
+
+
     <body onresize="test_responsive()">
         <div class="topnav" id="myTopnav">
-            <a href="#" id="name_site" class="name_site" onclick="create_home()">Efrei&nbsp;Farming</a>
+            <a href="#" id="name_site" class="name_site" onclick="create_home()"><b>Efrei&nbsp;Farming</b></a>
             <a href="#" class="active" id="nav_home" onclick="create_home()">Accueil</a>
             <a href="#" id="nav_prod" onclick="create_prod()">Produits</a>
             <a href="#" id="nav_devis" onclick="create_devis()">Devis<span id="devisQteMenu"></span></a>
             <a href="#" id="nav_avis" onclick="create_avis()">Avis</a>
             <a href="#" id="nav_propos" onclick="create_propos()">À&nbsp;propos</a> <!-- &nbsp; = NON-BREAKING SPACE -->
             <a href="javascript:void(0);" class="icon" onclick="responsiveSwitch()">&#9776;</a>
-        </div>
-            
+        </div> 
+
 
         <div id="home" class="home chuisla">
             <div class="image">
                 <img src="images/agricole.jpeg" alt="Efrei FARMING">
             </div>
+
             <div class="wrapper">
                 <div class="cheapcontent">
                     <h1>Notre entrée de gamme</h1>
                     <div class="cheapest" id="cheapest">
                     </div>
                 </div>
-                
                 <div class="popularcontent">
                     <h1>Le plus populaire</h1>
                     <div class="popularest" id="popularest">
                     </div>
                 </div>
-                
                 <div class="newcontent">
                     <h1>Le dernier cri</h1>
                     <div class="newest" id="newest">
                     </div>
                 </div>
-                
                 <div class="highendcontent">
                     <h1>La Rolls-Royce des tracteurs</h1>
                     <div class="highestend" id="highestend">
                     </div>
                 </div>
-                
             </div>
         </div>
+
 
         <div id="prod" class="prod chuispala">
-            <div id="recherche_produit" class="recherche_produit"> <!--la barre de recherche--></div>
-            <div id="page_produit" class="page_produit"> <!--la page-->
-            </div>
+            <div id="recherche_produit" class="recherche_produit aimant"><!--la barre de recherche--></div>
+
+            <div id="page_produit" class="page_produit"><!--la page--></div>
         </div>
 
+
         <div id="devis" class="devis chuispala">
-            <header>
+            <header class="aimant">
                 <div>
                     <form class="main" id="formonly">
                         <div class="formcontent">
-                            <select id="role">
-                                
-                            </select>
+                            <select id="role"></select>
                         </div>
                         <div class="buttons">
                             <button type="button" onclick="ajouterDevis()" id="bsub">
@@ -76,6 +78,7 @@
                     </form>
                 </div>
             </header>
+
             <main class="main">
                 <p id="title_table">Bon de commande - DEVIS</p>
                 <table id="table">
@@ -91,10 +94,8 @@
                 <h3 style="text-align: right;">QUANTITÉ D'ARTICLES : <span id="totalQte">0</span></h3>
                 <p style="text-align: right;">Pour passer une commande, veuillez <a href="https://www.societe.com/societe/societe-chereau-350434304.html">nous contacter ici</a>.</p>
             </main>
-
         </div>
 
-        <!--Page Avis-->
 
         <div id="avis" class="avis chuispala">
             <div class="commentaire">
@@ -117,6 +118,7 @@
                         <img src="images/5_etoiles.png" width="122" height="34" alt="étoile n°3">
                 </section>
             </div>
+
             <div class="aside_avis">
                 <h2> Laissez-nous un avis et un commentaire</h2>
                 <p>Si nos produits vous plaisent, n'hésitez pas à nous laisser des commentaires afin de savoir si notre travail vous plaît ou si vous pensez qu'il y a des points sur lesquels il faudrait que l'on s'améliore.</p>
@@ -127,22 +129,23 @@
             </div>
         </div>
 
+
         <div id="propos" class="propos chuispala">
             <div class="about">
                 <h3>Notre site sert d'intermédaire entre une entreprise agricole et des consommateurs travaillant dans le domaine de l'agriculture.<br><br>
 
                     En effet, l'entreprise CHEREAU a du mal à renseigner ses potentiels clients sur ses produits et à répondre à leurs demandes.<br><br>
-    
+
                     C'est pour cela, qu'en bons étudiants d'école d'ingénieur, nous aidons au mieux cette entreprise pour qu'elle se développe grâce à ses ventes.<br><br>
                     
                     Nous mettons en lumières les différents modèles de tracteurs disponibles ainsi que leurs quantités.<br><br>
-    
+
                     De plus, nous permettons aux clients de remplir un formulaire afin de commander un produit en renseignant leur choix de modèle ainsi que la quantité voulue.<br><br>
-    
+
                     Des liens sont à disposition pour réserver directement sur le site officiel CHEREAU.
                 </h3>
-                <br><br><br>Tâches remplies :<br>
-                <div class="tasktable">
+                <div id="tasktable" class="tasktable">
+                    <h4><u>Tâches remplies :</u></h4>
                     <table class="tasktable">
                         <tr>
                             <th>Arnaud BATISTA</th>
@@ -158,30 +161,28 @@
                         </tr>
                     </table>
                 </div>
-    
-                
             </div>
 
             <div class="sources">
-                <p>Sources :<br>
+                <h4>Sources :</h4>
+                <p>
                     <a href="https://www.fendt.com/fr/geneva-assets/widget/28272/news-2-crop.jpg">Fendt</a><br>
                     <a href="https://sc04.alicdn.com/kf/HTB1lhRzXoLrK1Rjy1zbq6AenFXa6.jpg">Alicdn.com</a><br>
-                    <a href="https://lh3.googleusercontent.com/proxy/YsQ80RspJm7eVX67CoknnL6MDovJaujT_BUGdzSw1eVwO006GH9Q-0z3HS1td6mPHUz340QDHP05hHwoqhTE-EIYGnUwMqae2PSBcwkhEczpZUlL2tI0eNmRofV1CLYXdw">Google User Content</a><br>
+                    <a href="https://lh3.googleusercontent.com/proxy/YsQ80RspJm7eVX67CoknnL6MDovJaujT_BUGdzSw1eVwO006GH9Q-0z3HS1td6mPHUz340QDHP05hHwoqhTE-EIYGnUwMqae2PSBcwkhEczpZUlL2tI0eNmRofV1CLYXdw">Google UC</a><br>
                     <a href="https://www.mtdfrance.fr/sites/default/files/styles/product_crop/public/upload/product/img/MTD%2096.jpg?h=259c78bd&itok=j4XUz_RY">MTD France</a><br>
                     <a href="https://www.vignovin.com/images/stories/partenaires/gregoire/actualites/g5-310-320/g5-320-tracteur-vigne-etroite.jpg">Vignovin</a><br>
                     <a href="https://i.servimg.com/u/f44/15/84/06/83/tm/bizare11.jpg">Servimg</a><br>
                     <a href="https://www.eliatis.com/IMG/jpg/51510895_421300918622946_2077982667604754432_n.jpg">Eliatis</a><br>
                     <a href="https://agrip.fr/wp-content/uploads/2016/04/agrip-pieces-detachees-maintenance-tracteurs-engins-agricoles-forestiers-industriels-jd5000-800x800.jpg">Agrip</a><br>
                     <a href="https://www.reform.at/fileadmin/_processed_/4/2/csm_metrac-H7RX-09-2015_Logo-neu_01_3adea0a883.jpg">Reform</a><br>
-                    <a href="https://de.tec24.com/13/16034/800/800/6046980_0.jpg">Tec24 Deutschland</a><br>
+                    <a href="https://de.tec24.com/13/16034/800/800/6046980_0.jpg">Tec24 DE</a><br>
                     <a href="https://www.artcurial.com/sites/default/files/styles/840_width/public/lots-images/2019-02-01-15/3888_10649706_0.jpg?itok=DCsymmFl">Artcurial</a><br>
                     <a href="https://img.agriexpo.online/fr/images_ag/photo-g/168666-10252661.jpg">Agriexpo</a>
                 </p>
             </div>
-            
         </div>
+
         
-        <!--pied de page-->
         <div class="footer">
             <div class="container">
                 <div class="row">
@@ -189,38 +190,36 @@
                         <h3>Développeurs du site</h3>
                         <p>Arnaud BATISTA</p>
                         <p>Nassim BELLIK</p>
-                        <p>Vincent MARGET</p>
+                        <p>Vincent MARGUET</p>
                         <p>Michaël NASS</p>
                     </div>
-    
                     <div class="colonne_2">
                         <img src="images/EFREI_Paris_logo.jpg" alt="logo de l'école EFREI Paris">
-                        <p>Site internet réalisé pour la société CHEREAU </p>
+                        <p>Site internet réalisé pour la société CHEREAU</p>
                     </div>
-    
                     <div class="colonne_3">
                         <h3>Nos Informations</h3>
                         <ul>
-                            <li> <a href="https://www.societe.com/societe/societe-chereau-350434304.html"> Conctacter la société CHEREAU</a> </li>
-                            <li>Nouvelles Informations</li>
-                            <li><a href="https://www.cnil.fr/fr/comprendre-le-rgpd"> Collectes des données Personnelles/RGPD </a></li>
-                        </ul>
+                            <li><a href="https://www.societe.com/societe/societe-chereau-350434304.html">Conctacter la société CHEREAU</a></li>
+                            <li><a href ="https://www.societe.com/societe/societe-chereau-350434304.html">Nouvelles Informations</a></li>
+                            <li><a href="https://www.cnil.fr/fr/comprendre-le-rgpd">Collectes des données Personnelles/RGPD</a></li>
+                        </ul><br>
                     </div>
-    
                     <div class="colonne_4">
                         <h3>Réseaux sociaux</h3>
                         <ul>
-                            <li> <a href="https://www.facebook.com/EfreiParis">Facebook</a> </li> 
-                            <li> <a href="https://twitter.com/Efrei_Paris">Twitter</a> </li>
-                            <li> <a href="https://www.instagram.com/Efrei_Paris/">Instagram</a> </li>
-                            <li> <a href="https://www.youtube.com/user/efrei">Youtube</a> </li>
+                            <li><a href="https://www.facebook.com/EfreiParis">Facebook</a></li> 
+                            <li><a href="https://twitter.com/Efrei_Paris">Twitter</a></li>
+                            <li><a href="https://www.instagram.com/Efrei_Paris/">Instagram</a></li>
+                            <li><a href="https://www.youtube.com/user/efrei">Youtube</a></li>
                         </ul>
                     </div>
                 </div>
                 <hr>
-                <p class="copyright">Copyright 2021 - Projet Programmation WEB</p>
+                <p class="copyright">Copyright 2021 -&nbsp;Projet Programmation WEB -&nbsp;<a href="#" onclick="create_propos()">À&nbsp;propos</a></p>
             </div>
         </div>
+
         <script src="scripts/app.js"></script>  
     </body>
 </html>

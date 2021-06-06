@@ -20,9 +20,6 @@ const avis = document.getElementById("avis");
 const propos = document.getElementById("propos");
 const defaulttable = document.getElementById('table').innerHTML;
 
-var bornemoins = document.getElementById("formonly");
-var borneplus = bornemoins.offsetTop + bornemoins.offsetHeight;
-
 /*----- ----- ----- ----- ----- ----- ----- ----- ----- -----
     Bibliotheque
 ----- ----- ----- ----- ----- ----- ----- ----- ----- -----*/
@@ -122,9 +119,9 @@ function recherche(){
     ma_page.innerHTML = "";
     //console.log(ma_page);
     for(var key in les_produits) { /* stringB.indexOf( stringA ) > -1 */
-      if (les_produits[key].nom.indexOf(ma_recherche)>-1||
-      les_produits[key].type.indexOf(ma_recherche)>-1||
-      les_produits[key].description.indexOf(ma_recherche)>-1||
+      if (les_produits[key].nom.toUpperCase().indexOf(ma_recherche.toUpperCase())>-1||
+      les_produits[key].type.toUpperCase().indexOf(ma_recherche.toUpperCase())>-1||
+      les_produits[key].description.toUpperCase().indexOf(ma_recherche.toUpperCase())>-1||
       les_produits[key].annee_de_creation.toString().indexOf(ma_recherche)>-1||
       les_produits[key].poids.indexOf(ma_recherche)>-1||
       les_produits[key].longueur.toString().indexOf(ma_recherche)>-1||
@@ -332,16 +329,6 @@ function suicide(){
   devis.textContent = totalDevis;
   qte.textContent = totalQte;
   devisqte.textContent = "";
-}
-
-window.onscroll = function() {electroaimant()};
-
-function electroaimant() {
-  if (window.pageYOffset > borneplus) {
-	  bornemoins.classList.add("aimante");
-  } else {
-	bornemoins.classList.remove("aimante");
-	  }
 }
 
 // ----- Tableau -----
