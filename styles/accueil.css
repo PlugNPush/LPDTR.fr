@@ -13,6 +13,13 @@ body {
 	background-color: lightgrey;
 }
 
+.unselectable {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 /*------------------Boutons---------------------*/
 
 button {
@@ -178,7 +185,6 @@ tbody tr:last-of-type {
     font-size: 3vw;
     color: whitesmoke;
     font-weight: bold;
-    user-select: none;
 }
 
 /*---------------------Produits------------------------*/
