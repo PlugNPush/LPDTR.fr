@@ -154,8 +154,8 @@ function suicide_recherche(){
 function crea_1_produit(num){
   // c'est pour l'affichage, car aprés on va afficher les produits sur des pages par 10 (à voir) et faire des recherches
   return '<div id="produit_'+les_produits[num].id+'" class="produit"><img src="images/'+les_produits[num].id
-  +'.png"><div class="all_info"><div class="info_produit">'+les_produits[num].nom+'</div><div class="description_produit">'+les_produits[num].description
-  +'</div><div class="note_produit">'+les_produits[num].note+'/5 *</div><div class="cout_produit">'+les_produits[num].prix
+  +'.png"><div class="all_info"><div class="info_produit">'+les_produits[num].nom+', '+les_produits[num].annee_de_creation+'</div><div class="type_produit">'+les_produits[num].type+'</div><div class="description_produit">'+les_produits[num].description
+  +'</div><div class="taille_produit">'+les_produits[num].poids+', '+les_produits[num].longueur+'x'+les_produits[num].largeur+'x'+les_produits[num].hauteur+' cm</div><div class="note_produit">'+les_produits[num].note+'/5 *</div><div class="cout_produit">'+les_produits[num].prix
   +' €</div><div class="add_button" onclick="ajouterDevis('+les_produits[num].id+')"><button type="button">Ajouter au devis</button></div></div></div>';
 }
 

@@ -396,7 +396,7 @@ tbody tr:last-of-type {
 }
 
 @media only screen and (max-width : 755px) {
-    .avis { /* le aside passe à droite au delà de 1024px*/
+    .avis { /* le aside passe à droite en dessous des sections pour une taille d'écran inférieur à 755p*/
         flex-direction: column;
     }
 }
@@ -440,7 +440,7 @@ tbody tr:last-of-type {
     A propos
 ----- ----- ----- ----- ----- ----- ----- ----- ----- -----*/
 
-.propos { /* le aside passe à droite du main au delà de 1024px*/
+.propos { 
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -457,7 +457,7 @@ tbody tr:last-of-type {
 }
 
 @media only screen and (max-width : 755px) {
-    .propos { /* le aside passe à droite du main au delà de 1024px*/
+    .propos { /* le aside passe à droite du main au delà de 755px*/
         flex-direction: column;
     }
 }
@@ -469,6 +469,10 @@ tbody tr:last-of-type {
     background-color: white;
     padding: 10px;
     margin: 5px;
+}
+
+.about th, .about td {
+    padding-right: 15px;
 }
 
 .tasktable {
